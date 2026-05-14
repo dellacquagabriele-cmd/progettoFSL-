@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:opsz,wght@6-72,500;6-72,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2c3135",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dee3e9",
+                    "on-tertiary-container": "#4d2b00",
+                    "surface-bright": "#f6faff",
+                    "background": "#F8FAFC",
+                    "tertiary": "#8a5100",
+                    "on-background": "#171c20",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#006591",
+                    "tertiary-container": "#de8712",
+                    "on-surface": "#171c20",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#dee3e9",
+                    "surface-dim": "#d6dae0",
+                    "secondary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eaeef4",
+                    "surface-container-high": "#e4e8ee",
+                    "on-tertiary-fixed": "#2c1600",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#131b2e",
+                    "tertiary-fixed": "#ffdcbd",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed-dim": "#ffb86e",
+                    "secondary": "#565e74",
+                    "surface-container-low": "#f0f4fa",
+                    "surface-tint": "#006591",
+                    "on-tertiary-fixed-variant": "#693c00",
+                    "outline": "#6e7881",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#003751",
+                    "inverse-on-surface": "#edf1f7",
+                    "accent-cyan": "#0EA5E9",
+                    "on-primary-fixed": "#001e2f",
+                    "text-primary": "#0F172A",
+                    "secondary-container": "#dae2fd",
+                    "primary-container": "#0ea5e9",
+                    "surface": "#f6faff",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-surface-variant": "#3e4850",
+                    "primary-fixed": "#c9e6ff",
+                    "outline-variant": "#bec8d2",
+                    "text-secondary": "#64748B",
+                    "on-secondary-container": "#5c647a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "5rem",
+                    "component-gap": "3rem",
+                    "gutter": "2rem",
+                    "container-max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["1.125rem", {"lineHeight": "1.625", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "h1": ["4rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h2": ["2.5rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-md": ["1rem", {"lineHeight": "1.625", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md">
+<nav class="flex justify-between items-center max-w-container-max-width mx-auto px-gutter py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="menu">menu</span>
+<span class="font-h2 text-h2 font-semibold text-on-surface dark:text-inverse-on-surface tracking-widest">DELL'ACQUA</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label text-label text-accent-cyan border-b border-accent-cyan" href="#">EXPERIENCE</a>
+<a class="font-label text-label text-on-surface-variant hover:text-accent-cyan transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="font-label text-label text-on-surface-variant hover:text-accent-cyan transition-colors duration-300" href="#">ABOUT</a>
+<button class="font-label text-label text-primary dark:text-primary-fixed-dim border border-primary px-6 py-2 hover:bg-primary hover:text-white transition-all duration-300 scale-105">CONTACT</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-padding">
+<!-- Hero Section for Content Header -->
+<section class="max-w-container-max-width mx-auto px-gutter mb-20 text-center">
+<h1 class="font-h1 text-h1 text-on-surface mb-6">Esperienze</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto">In questa sezione sono elencate le attività PCTO svolte nel corso degli anni</p>
+</section>
+<!-- Experience List -->
+<section class="max-w-container-max-width mx-auto px-gutter">
+<div class="flex flex-col gap-8">
+<!-- Campus Fisica Nucleare - Full Width Row -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.005]">
+<div class="relative aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+<img alt="Campus Fisica Nucleare" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100" data-alt="A clean, cinematic photograph of a modern particle physics laboratory interior. High-tech machinery with intricate cabling is arranged in a clinical, brightly lit hall with cool cyan highlights and soft white illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6Vm6F4y3o-osawosKtTEUGzql_wnWKg_aZCtrwAwtstF-BwhfhkalQqiJYt-w3OfwyDBk9l6Tcof89hs_PsXplNqymlzFwPAD645HKneuXuxqOesX6OxiEJTsiiBIgO-vFKd3H8SfJ5nXt8h1Ecr5sGVxrv-TGIOdi9HtTAje9oEiDIwJhK5lnVEM60nindE42uhX_VjjOJun1H9eUcMaa45eLF3bFVW0GTE0TpEGwBGAiSI8XJI_6spEmBPg8DW3pPmA-7cJdo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/30 to-transparent opacity-80"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bottom-0 left-0 w-full">
+<span class="font-label text-label text-accent-cyan mb-2 block">RESEARCH FACILITY</span>
+<h2 class="font-h2 text-h2 text-white mb-2">Campus Fisica Nucleare</h2>
+<p class="font-body-md text-white/90 leading-relaxed max-w-2xl">
+        Advanced research program focusing on nuclear physics applications and laboratory instrumentation management.
+      </p>
+</div>
+</div>
+</div>
+<!-- Osservatorio Astronomico (CRE) - Full Width Row -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.005]">
+<div class="relative aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+<img alt="Osservatorio Astronomico" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100" data-alt="A breathtaking night view of a professional astronomical observatory dome silhouetted against a brilliant star-filled sky. The lighting is deep indigo and midnight blue, with subtle cyan accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2xqa2ut588WQdhDWI8Wv8PjlDnrEm360cPQux0T0b4k6RxtbMSKMf49H_00RGcvIroEj6RYCXKxiF53rNJuzjQX2uXTzM-YwF6a9eH-0pyDYK6BChM82yMI7pX_MULcj0mOWx8osHnLYsHYz49kHBlxt057uG5xWxv6s2C7oLgciONiAPE1RnHqy--4JkH0utII-4sPpurMHun7XD1gBwAiLMtg_t1z7fWF1bnCtxsJ8gz9OuxXf-0u2Xw5zI06_257LUUkso8TA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/30 to-transparent opacity-80"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bottom-0 left-0 w-full">
+<span class="font-label text-label text-accent-cyan mb-2 block">SPACE SCIENCE</span>
+<h2 class="font-h2 text-h2 text-white mb-2">Osservatorio Astronomico (CRE)</h2>
+<p class="font-body-md text-white/90 leading-relaxed max-w-2xl">
+        Observational logistics and celestial data management at the CRE facility, exploring the depths of cosmic structures.
+      </p>
+</div>
+</div>
+</div>
+<!-- Bergamo Scienza - Full Width Row -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.005]">
+<div class="relative aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+<img alt="Bergamo Scienza" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100" data-alt="A modern science museum exhibition hall with clean white walls and geometric interactive displays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCws--lOTeyrH6uGDotVJdw4EuW540GGTXqpaFZtWqUYNFdAJZT9qlmZmZqMvgIeeLX_L3IOyDjuhjs7PvMh7-Uwyf8x3nKNP10c7z1yAU6sGPxeKPrwRlvjkh03xEY06GcImrvOHtApBmIGFwps90MO3uOBq1WXu-XkcObFu5gjaAFYehlWUpOAXQYp46ViuK2WBo65Ff7pK6p6xabNkAnXOauy6gPCzdjgM_AlexpmRb3_xazBjH_WpJVZ70eOHhf7mlUwpgmVa0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/30 to-transparent opacity-80"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bottom-0 left-0 w-full">
+<span class="font-label text-label text-accent-cyan mb-2 block">PUBLIC COMMUNICATION</span>
+<h2 class="font-h2 text-h2 text-white mb-2">Bergamo Scienza</h2>
+<p class="font-body-md text-white/90 leading-relaxed max-w-2xl">
+        Curating educational pathways and scientific dissemination for one of Italy's most prestigious science festivals. Bridging the gap between complex research and public understanding.
+      </p>
+</div>
+</div>
+</div>
+<!-- Project Work Statistica - Full Width Row -->
+<div class="group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low transition-transform duration-500 hover:scale-[1.005]">
+<div class="relative aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+<img alt="Project Work Statistica" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100" data-alt="A sophisticated, clean workspace with a high-resolution monitor displaying complex statistical charts, graphs, and data visualizations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD4SldxgF3nVexSYdnLx_k1TLeDAzdxodMBcNISDJ-3TrjAvyYDDJKtdRstMRmq_J3WDEOzbhrxud1lhIHdB1haj564qeojy8cd9pe-GuWZoWyFUXqegX1xt_kLq6qvnOirIxRCpNL6-mOFixqg4CYQrcQWCWvRjM1eZNn-uHUhINJLnMAUXgPvSnAp-LtI7nuS3_eZN96yNy630Gvctyo9isxBViW7DoAtO2iI4uWZoRp426HR35wC9xdSCT9G7Aw-E5YUnNMxRY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/30 to-transparent opacity-80"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bottom-0 left-0 w-full">
+<span class="font-label text-label text-accent-cyan mb-2 block">DATA ANALYSIS</span>
+<h2 class="font-h2 text-h2 text-white mb-2">Project Work Statistica</h2>
+<p class="font-body-md text-white/90 leading-relaxed max-w-2xl">
+        Applying advanced statistical methodologies and computational modeling to interpret complex datasets. Focus on probabilistic analysis and data-driven decision-making.
+      </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max-width mx-auto px-gutter gap-component-gap">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-label text-label font-bold text-on-surface">DELL'ACQUA</span>
+<p class="font-body-md text-body-md text-text-secondary">© 2024 Gabriele Dell'Acqua. Scientific Communication &amp; CS.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors opacity-80 hover:opacity-100" href="#">Archive</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
