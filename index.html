@@ -1,0 +1,228 @@
+<!DOCTYPE html><html class="light" lang="it"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2c3135",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dee3e9",
+                    "on-tertiary-container": "#4d2b00",
+                    "surface-bright": "#f6faff",
+                    "background": "#F8FAFC",
+                    "tertiary": "#8a5100",
+                    "on-background": "#171c20",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#006591",
+                    "tertiary-container": "#de8712",
+                    "on-surface": "#171c20",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#dee3e9",
+                    "surface-dim": "#d6dae0",
+                    "secondary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eaeef4",
+                    "surface-container-high": "#e4e8ee",
+                    "on-tertiary-fixed": "#2c1600",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#131b2e",
+                    "tertiary-fixed": "#ffdcbd",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed-dim": "#ffb86e",
+                    "secondary": "#565e74",
+                    "surface-container-low": "#f0f4fa",
+                    "surface-tint": "#006591",
+                    "on-tertiary-fixed-variant": "#693c00",
+                    "outline": "#6e7881",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#003751",
+                    "inverse-on-surface": "#edf1f7",
+                    "accent-cyan": "#0EA5E9",
+                    "on-primary-fixed": "#001e2f",
+                    "text-primary": "#0F172A",
+                    "secondary-container": "#dae2fd",
+                    "primary-container": "#0ea5e9",
+                    "surface": "#f6faff",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-surface-variant": "#3e4850",
+                    "primary-fixed": "#c9e6ff",
+                    "outline-variant": "#bec8d2",
+                    "text-secondary": "#64748B",
+                    "on-secondary-container": "#5c647a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "5rem",
+                    "component-gap": "3rem",
+                    "gutter": "2rem",
+                    "container-max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["1.125rem", {"lineHeight": "1.625", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "h1": ["4rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h2": ["2.5rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-md": ["1rem", {"lineHeight": "1.625", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-container-max-width mx-auto px-gutter py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-h2 text-h2 font-semibold text-on-surface tracking-widest uppercase">DELL'ACQUA</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label text-label text-accent-cyan border-b border-accent-cyan py-1" href="#">HOME</a>
+<a class="font-label text-label text-on-surface-variant hover:text-accent-cyan transition-colors duration-300 py-1" href="#">RESEARCH</a>
+<a class="font-label text-label text-on-surface-variant hover:text-accent-cyan transition-colors duration-300 py-1" href="#">PROJECTS</a>
+<a class="font-label text-label text-on-surface-variant hover:text-accent-cyan transition-colors duration-300 py-1" href="#">ARCHIVE</a>
+</div>
+<button class="px-6 py-2 border border-primary text-primary font-label text-label hover:bg-primary hover:text-on-primary transition-all duration-300 scale-105">
+                CONTACT
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-surface-container-low">
+<!-- Background Decorative Element -->
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-accent-cyan/30 to-transparent rounded-full blur-[120px]"></div>
+</div>
+<div class="relative z-10 max-w-container-max-width mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-12 gap-component-gap items-center">
+<!-- Main Typography Cluster -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<div class="inline-flex items-center gap-3">
+<span class="w-12 h-[1px] bg-accent-cyan"></span>
+<span class="font-label text-label text-accent-cyan uppercase tracking-widest">Scientific Communication &amp; CS</span>
+</div>
+<h1 class="font-h1 text-[5rem] lg:text-[7rem] text-text-primary leading-[0.9] tracking-tighter">
+                        Gabriele<br>
+<span class="text-primary italic">Dell'Acqua</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl">Percorso accademico e professionale tra innovazione tecnologica e divulgazione scientifica.</p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary px-8 py-4 text-on-primary font-label text-label uppercase tracking-widest hover:bg-accent-cyan transition-all duration-300">
+                            Explore Research
+                        </button>
+<button class="border border-outline-variant px-8 py-4 text-on-surface font-label text-label uppercase tracking-widest hover:border-accent-cyan hover:text-accent-cyan transition-all duration-300">
+                            View Archive
+                        </button>
+</div>
+</div>
+<!-- Featured Image / Bento Card -->
+<div class="lg:col-span-4 flex justify-end">
+<div class="relative w-full aspect-[4/5] max-w-sm">
+<div class="absolute -inset-4 border border-accent-cyan/20 rounded-lg"></div>
+<img alt="Gabriele Dell'Acqua" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700 rounded-lg shadow-2xl" data-alt="A sophisticated, high-contrast portrait of a young male professional in a minimalist laboratory setting. The lighting is cold and architectural, casting sharp shadows that emphasize the clean lines of the space. Desaturated tones dominate the frame, with subtle ice-grey reflections on glass surfaces. The overall aesthetic is professional, academic, and modern, echoing a premium scientific journal editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe_NqsA8v-84SNXqFHWmxxK7E0WkTaUjwU9CuHI7S5C_kOIxMb9DWHXPav5dwL88mSkZopOfbYzJ8l8YhnzuvzgsnJTQGcnlRODMqyU3Nyfc9zzm3JVDmA0C5UvoXw6HnWVTOVJYEfm0P8iic5nAw19V2RMTFBjWliLFzjseZyfCNPPjhQ8EAFkdzUa1mBGe0eXhREu2oOokMOWzN7Bfb7w25dp5vqcsYu19GPUorxBNbsK89coibVW-HsFiRIDlmMapwe3qYBv_s">
+<div class="absolute -bottom-6 -right-6 p-6 glass-card border border-white/10 rounded-xl shadow-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan text-4xl" data-icon="science">science</span>
+<div>
+<p class="font-label text-label text-primary">RESEARCHER</p>
+<p class="font-body-md text-[12px] text-text-secondary">Milan, IT</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="font-label text-[10px] tracking-widest uppercase">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Experience Preview Bento Grid -->
+<section class="py-section-padding max-w-container-max-width mx-auto px-gutter">
+<div class="mb-12 max-w-3xl">
+<p class="font-body-lg text-body-lg text-text-secondary italic leading-relaxed">Competenze sviluppate</p>
+</div><div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-high p-8 rounded-xl flex flex-col justify-between min-h-[300px] hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-accent-cyan group-hover:text-on-primary" data-icon="terminal">terminal</span>
+<div>
+<h3 class="font-h2 text-h2 group-hover:text-on-primary">Computer Science</h3>
+<p class="font-body-md text-text-secondary group-hover:text-on-primary/80 mt-2">Developing robust algorithms for scientific visualization.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-high p-8 rounded-xl flex flex-col justify-between min-h-[300px] hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-accent-cyan group-hover:text-on-primary" data-icon="auto_awesome">auto_awesome</span>
+<div>
+<h3 class="font-h2 text-h2 group-hover:text-on-primary">Communication</h3>
+<p class="font-body-md text-text-secondary group-hover:text-on-primary/80 mt-2">Translating complex data into compelling visual stories.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-high p-8 rounded-xl flex flex-col justify-between min-h-[300px] hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-accent-cyan group-hover:text-on-primary" data-icon="database">database</span>
+<div>
+<h3 class="font-h2 text-h2 group-hover:text-on-primary">Data Science</h3>
+<p class="font-body-md text-text-secondary group-hover:text-on-primary/80 mt-2">Analyzing the intersection of technology and biology.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-low py-section-padding border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max-width mx-auto px-gutter gap-component-gap">
+<div class="flex flex-col gap-2">
+<span class="font-label text-label font-bold text-on-surface uppercase tracking-widest">DELL'ACQUA</span>
+<p class="font-body-md text-body-md text-text-secondary">© 2024 Gabriele Dell'Acqua. Scientific Communication &amp; CS.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors" href="#">Archive</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-accent-cyan transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
